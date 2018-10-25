@@ -31,7 +31,7 @@
                   <v-flex xs5>
                     <v-img class="picture"
                       :src=dish.img
-                      height="100%"
+                      aspect-ratio=1
                     ></v-img>
                   </v-flex>
                   <v-flex xs7>
@@ -220,7 +220,7 @@
 
   .picture {
       border-radius: 5px;
-      margin: 5px;
+      margin-left: 5px;
   }
 
   .section {
@@ -243,7 +243,7 @@
 
   .price {
       position: absolute;
-      bottom: 5px;
+      bottom: 13px;
       color: #589442;
       font-size: 0.9em;
   }
