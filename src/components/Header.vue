@@ -33,7 +33,7 @@
         </center>
       </v-layout>
       <v-card-text style="height: 100px; position: relative">
-        <v-img src="./assets/lafourchette.svg"></v-img>
+        <v-img src="../assets/lafourchette.svg"></v-img>
       </v-card-text>
     </v-img>
 </template>
@@ -61,7 +61,7 @@
     margin-top: -50px;
   }
   .toolbar {
-      font-size: 17px;
+      font-size: 14px;
       height: 40px;
       margin: auto;
       line-height: 40px;
@@ -70,7 +70,7 @@
       border-radius: 20px;
   }
   .bullet {
-      font-size: 20px;
+      font-size: 17px;
       font-weight: bold;
   }
 </style>
