@@ -38,15 +38,27 @@
                 {{ dish.header }}
               </v-subheader>
             </v-flex>
-            <v-flex xs12 sm6 md3>
-              <v-card color="blue-grey darken-2" class="white--text">
-                <v-card-title primary-title>
-                  <div class="headline">{{dish.name}}</div>
-                  <div>{{dish.description}}</div>
-                </v-card-title>
-                <v-card-actions>
-                  <v-btn flat dark>Ajouter à ma commande</v-btn>
-                </v-card-actions>
+            <v-flex xs12 sm6 md3 v-if="!dish.header">
+              <v-card class="gray--text dish-card pa-0">
+                <v-layout>
+                  <v-flex xs5>
+                    <v-img
+                      :src=dish.img
+                      height="100%"
+                    ></v-img>
+                  </v-flex>
+                  <v-flex xs7>
+                    <v-card-title primary-title>
+                      <div>
+                        <div class="headline">{{dish.name}}</div>
+                        <div>{{dish.description}}</div>
+                      </div>
+                    </v-card-title>
+                    <v-card-actions>
+                      <v-btn class="primary">Ajouter</v-btn>
+                    </v-card-actions>
+                  </v-flex>
+                </v-layout>
               </v-card>
             </v-flex xs12>
           </template>
@@ -65,29 +77,35 @@
           { header: 'Entrée' },
           {
             name: 'salade de choux',
-            description: 'Une salade de choux'
+            description: 'Une salade de choux',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           }, {
             name: 'salade de crabes',
-            description: 'Une salade de crabes'
+            description: 'Une salade de crabes',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           }, {
             name: 'salade d\'endives',
-            description: 'Une salade d\'endives'
+            description: 'Une salade d\'endives',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           },
           { header: 'Plat' },
           {
             type: 'Plat',
             name: 'Pâtes carbonara',
-            description: 'des pâtes miam miam'
+            description: 'des pâtes miam miam',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           }, {
             type: 'Plat',
             name: 'Pizza Quatre fromages',
-            description: 'pizza'
+            description: 'pizza',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           },
           { header: 'Dessert' },
           {
             type: 'Dessert',
             name: 'Panna cota',
-            description: 'Le seul dessert disponible'
+            description: 'Le seul dessert disponible',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
           }
         ]
       }
@@ -95,6 +113,9 @@
   }
 </script>
 
-<style>
-
+<style scoped>
+  .dish-card {
+    padding: 0;
+    margin: 0;
+  }
 </style>
