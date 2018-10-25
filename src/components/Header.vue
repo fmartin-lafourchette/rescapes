@@ -1,5 +1,6 @@
 <template>
     <v-img
+      gradient="to top right, rgba(150,150,150,.2), rgba(80,80,80,.6)"
       src="https://u.preprod.tfstatic.com/restaurant_photos/235/279235/169/612/le-bon-jour-entree-cf9b4.jpg"
       height="200px"
     >
