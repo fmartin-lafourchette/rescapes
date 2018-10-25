@@ -29,10 +29,15 @@
         fluid
         grid-list-lg
       >
+        <div class="choose">Choisissez ce que vous souhaitez manger</div>
+        <div>
+          <input type="checkbox" value="" name="allTable" id="allTable" />
+          <label for="allTable"> Je commande pour l'ensemble de la table</label>
+        </div>
         <v-layout row wrap>
-          <template v-for="dish in restaurant.dishes">
+          <template v-for="dish in restaurant.dishes" class="dish">
             <v-flex xs12 v-if="dish.header">
-              <v-subheader
+              <v-subheader class="section"
                 :key="dish.header"
               >
                 {{ dish.header }}
@@ -44,7 +49,7 @@
               >
                 <v-layout>
                   <v-flex xs5>
-                    <v-img
+                    <v-img class="picture"
                       :src=dish.img
                       height="100%"
                     ></v-img>
@@ -75,11 +80,21 @@
                       +
                     </v-btn>
                     </v-card-actions>
+                    <span class="price">{{dish.price}}€</span>
                   </v-flex>
                 </v-layout>
               </v-card>
             </v-flex>
           </template>
+          <v-flex xs12>
+              <div class="footer">
+                  <strong>Carte bancaire nécessaire</strong>
+                  <br />
+                  Confirmation immédiate - Service gratuit<br />
+                  Annulation gratuite jusqu'à 24h avant le repas<br />
+                  En cliquant sur "CONTINUER" j'accepte les conditions générales d'utilisation
+              </div>
+          </v-flex>
         </v-layout>
       </v-container>
     </v-card>
@@ -100,70 +115,101 @@
       restaurant: {
         name: 'Le déjeuner dans l\'herbe',
         dishes: [
-          { header: 'Entrée' },
+          { header: 'ENTREES . 5 choix' },
           {
             quantity: 0,
-            name: 'salade de choux',
-            description: 'Une salade de choux',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Oeuf parfait et lentilles',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 7
           }, {
             quantity: 0,
-            name: 'salade de crabes',
-            description: 'Une salade de crabes',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Foie gras maison, toasts et confit d’oignons',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 15
           }, {
-            name: 'salade d\'endives',
-            description: 'Une salade d\'endives',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
-          }, {
-            quantity: 0,
-            name: 'salade de choux',
-            description: 'Une salade de choux',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Millefeuille tomates aubergines mozzarella',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 8
           }, {
             quantity: 0,
-            name: 'salade de crabes',
-            description: 'Une salade de crabes',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Oeufs mayonnaise à l\'ancienne',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 6
           }, {
             quantity: 0,
-            name: 'salade d\'endives',
-            description: 'Une salade d\'endives',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Assiette de poireaux et vinaigrette mousseline, parmesan',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 7
           },
-          { header: 'Plat' },
+          { header: 'PLATS . 5 choix' },
           {
             quantity: 0,
-            name: 'Pâtes carbonara',
-            description: 'des pâtes miam miam',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Tartare de boeuf Charolais, au couteau, pommes grenailles et salade.',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 17
           }, {
             quantity: 0,
-            name: 'Pizza Quatre fromages',
-            description: 'pizza',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Tartare de dorade à l’aneth, mesclun.',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 19
           }, {
             type: 'Plat',
-            name: 'Pâtes carbonara',
-            description: 'des pâtes miam miam',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Entrecôte de boeuf "Angus" 300 Grs, os à moëlle, sauce poivre et pommes grenailles.',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 25
           }, {
             quantity: 0,
-            name: 'Pizza Quatre fromages',
-            description: 'pizza',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Pièce du boucher, sauce au bleu, purée maison.',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 19
+          }, {
+            quantity: 0,
+            name: 'Blanquette de volaille, riz basmati',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 17
           },
-          { header: 'Dessert' },
+          { header: 'DESSERTS . 5 choix' },
           {
             quantity: 0,
-            name: 'Panna cota',
-            description: 'Le seul dessert disponible',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Poire pochée au caramel de beurre salé et tuile',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 8
           }, {
             quantity: 0,
-            name: 'Panna cota',
-            description: 'Le seul dessert disponible',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg'
+            name: 'Mousse au chocolat et amandes effilées',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 6
+          },
+          {
+            quantity: 0,
+            name: 'Tiramisu au cafe',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 6
+          }, {
+            quantity: 0,
+            name: 'Crème brulée à la vanille Bourbon',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 8.50
+          }, {
+            quantity: 0,
+            name: 'Café ou thé gourmand',
+            description: 'descritpion',
+            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            price: 7
           }
         ]
       }
@@ -172,5 +218,51 @@
 </script>
 
 <style scoped>
+    .v-card {
+        border-radius: 5px;
+    }
 
+    div.choose {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .picture {
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .section {
+        color: black;
+        font-size: 1.2em;
+        padding: 0px;
+    }
+
+    .headline {
+        font-weight: bold;
+        font-size: 1em!important;
+    }
+
+    .actions {
+        position: absolute;
+        bottom: -5px;
+        right: 5px;
+        color: #589442;
+    }
+
+    .price {
+        position: absolute;
+        bottom: 5px;
+        color: #589442;
+        font-size: 0.9em;
+    }
+
+    .footer {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.8em;
+    }
 </style>
