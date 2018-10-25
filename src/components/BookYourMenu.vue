@@ -1,29 +1,9 @@
 <template>
   <v-content>
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/lists/ali.png"
-      height="300px"
-    >
-      <v-layout
-        column
-        fill-height
-      >
-        <v-card-title>
-          <v-btn dark icon>
-            <v-icon>chevron_left</v-icon>
-          </v-btn>
-          <v-spacer></v-spacer>
-        </v-card-title>
-
-        <v-spacer></v-spacer>
-
-        <v-card-title class="white--text pl-5 pt-5">
-          <h1 class="font-weight-light secondary--text">
-            Réservez votre menu pour votre réservation à : "{{ restaurant.name }}"
-          </h1>
-        </v-card-title>
-      </v-layout>
-    </v-img>
+    <Header
+      :restaurant="restaurant"
+      logo="./assets/lafourchette.svg"
+    />
     <v-card>
       <v-container
         fluid
@@ -87,7 +67,12 @@
 </template>
 
 <script>
+  import Header from './Header.vue';
+
   export default {
+    components: {
+      Header
+    },
     methods: {
       decrement (dish) {
         dish.quantity && dish.quantity--
@@ -98,7 +83,7 @@
     },
     data: () => ({
       restaurant: {
-        name: 'Le déjeuner dans l\'herbe',
+        name: 'Le bon jour',
         dishes: [
           { header: 'Entrée' },
           {
@@ -172,5 +157,8 @@
 </script>
 
 <style scoped>
-
+  .title {
+    font-size: 24px;
+    text-align: center;
+  }
 </style>
