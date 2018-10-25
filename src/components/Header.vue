@@ -19,14 +19,14 @@
         </v-card-title>
         <center>
             <div
-                class="toolbar secondary ma-2 px-3"
+                class="toolbar secondary ma-2 px-3 grey--text text--darken-3"
             >
                 <span>2 pers</span>
-                <span class="primary--text mx-2">·</span>
+                <span class="primary--text mx-2 bullet">·</span>
                 <span>Ven 26/10</span>
-                <span class="primary--text mx-2">·</span>
+                <span class="primary--text mx-2 bullet">·</span>
                 <span>12:30</span>
-                <span class="primary--text mx-2">·</span>
+                <span class="primary--text mx-2 bullet">·</span>
                 <span>Sans offre</span>
             </div>
         </center>
@@ -67,5 +67,9 @@
       text-align: center;
       width: fit-content;
       border-radius: 20px;
+  }
+  .bullet {
+      font-size: 20px;
+      font-weight: bold;
   }
 </style>

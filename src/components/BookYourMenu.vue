@@ -66,17 +66,20 @@
               </v-card>
             </v-flex>
           </template>
-          <v-flex xs12>
-              <div class="footer">
-                  <strong>Carte bancaire nécessaire</strong>
-                  <br />
-                  Confirmation immédiate - Service gratuit<br />
-                  Annulation gratuite jusqu'à 24h avant le repas<br />
-                  En cliquant sur "CONTINUER" j'accepte les conditions générales d'utilisation
-              </div>
-          </v-flex>
         </v-layout>
       </v-container>
+      <div class="px-3">
+        <v-btn block color="primary">Valider</v-btn>
+        </div>
+        <v-flex xs12>
+            <div class="footer">
+                <strong>Carte bancaire nécessaire</strong>
+                <br />
+                Confirmation immédiate - Service gratuit<br />
+                Annulation gratuite jusqu'à 24h avant le repas<br />
+                En cliquant sur "CONTINUER" j'accepte les conditions générales d'utilisation
+            </div>
+        </v-flex>
     </v-card>
   </v-content>
 </template>
