@@ -20,11 +20,16 @@
         <v-toolbar
             flat
             floating
+            height="40px"
+            class="toolbar secondary ma-2"
         >
-            <v-toolbar-title>2 pers</v-toolbar-title>
-            <v-toolbar-title>Ven 26/10</v-toolbar-title>
-            <v-toolbar-title>12:30</v-toolbar-title>
-            <v-toolbar-title>Sans offre</v-toolbar-title>
+            <span>2 pers</span>
+            <span class="primary--text mx-2">·</span>
+            <span>Ven 26/10</span>
+            <span class="primary--text mx-2">·</span>
+            <span>12:30</span>
+            <span class="primary--text mx-2">·</span>
+            <span>Sans offre</span>
         </v-toolbar>
       </v-layout>
       <v-card-text style="height: 100px; position: relative">
@@ -53,5 +58,9 @@
     font-size: 24px;
     text-align: center;
     position: absolute;
+  }
+  .toolbar {
+      font-size: 20px;
+      border-radius: 20px;
   }
 </style>

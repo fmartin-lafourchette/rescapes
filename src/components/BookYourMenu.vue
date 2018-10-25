@@ -203,11 +203,6 @@
 </script>
 
 <style scoped>
-  .title {
-    font-size: 24px;
-    text-align: center;
-  }
-
   .v-card {
       border-radius: 5px;
   }
