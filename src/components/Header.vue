@@ -11,26 +11,25 @@
           <v-btn dark icon>
             <v-icon>chevron_left</v-icon>
           </v-btn>
-          <v-container class="title">
+          <div class="title">
             <span class="secondary--text">
               {{ restaurant.name }}
             </span>
-          </v-container>
+          </div>
         </v-card-title>
-        <v-toolbar
-            flat
-            floating
-            height="40px"
-            class="toolbar secondary ma-2"
-        >
-            <span>2 pers</span>
-            <span class="primary--text mx-2">·</span>
-            <span>Ven 26/10</span>
-            <span class="primary--text mx-2">·</span>
-            <span>12:30</span>
-            <span class="primary--text mx-2">·</span>
-            <span>Sans offre</span>
-        </v-toolbar>
+        <center>
+            <div
+                class="toolbar secondary ma-2 px-3"
+            >
+                <span>2 pers</span>
+                <span class="primary--text mx-2">·</span>
+                <span>Ven 26/10</span>
+                <span class="primary--text mx-2">·</span>
+                <span>12:30</span>
+                <span class="primary--text mx-2">·</span>
+                <span>Sans offre</span>
+            </div>
+        </center>
       </v-layout>
       <v-card-text style="height: 100px; position: relative">
         <v-img src="./assets/lafourchette.svg"></v-img>
@@ -56,11 +55,17 @@
 <style scoped>
   .title {
     font-size: 24px;
+    width: 100%;
     text-align: center;
-    position: absolute;
+    margin-top: -50px;
   }
   .toolbar {
-      font-size: 20px;
+      font-size: 17px;
+      height: 40px;
+      margin: auto;
+      line-height: 40px;
+      text-align: center;
+      width: fit-content;
       border-radius: 20px;
   }
 </style>
