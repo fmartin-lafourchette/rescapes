@@ -81,6 +81,15 @@
           </template>
         </v-layout>
       </v-container>
+      <center class="mb-4">
+        <h2 class="font-weight-light">
+          Total : {{ restaurant.dishes.reduce((tot, dish) => {
+            if (!dish.header)
+              tot += dish.quantity * dish.price
+            return tot;
+          }, 0) }} €
+        </h2>
+      </center>
       <div class="px-3">
         <v-btn block color="primary" @click="validate()">VALIDER</v-btn>
         </div>
