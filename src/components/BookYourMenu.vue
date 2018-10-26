@@ -48,10 +48,10 @@
                     ></v-img>
                   </v-flex>
                   <v-flex xs7>
-                    <v-card-title primary-title>
-                      <div class="text-truncate">
-                        <div class="headline">{{dish.name}}</div>
-                        <div>{{dish.description}}</div>
+                    <v-card-title primary-title class="pt-0 mb-2">
+                      <div>
+                        <div class="headline img: picture2," style="display:-webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;  overflow: hidden;line-height:20px!important;padding-top:3px">{{dish.name}}</div>
+                        <div style="font-size:0.9em; display:-webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;  overflow: hidden;padding-top:3px;">{{dish.description}}</div>
                       </div>
                     </v-card-title>
                     <v-card-actions class="actions">
@@ -99,6 +99,21 @@
 
 <script>
   import Header from './Header.vue';
+  import picture1 from '@/assets/dish/1.jpg';
+  import picture2 from '@/assets/dish/2.jpg';
+  import picture3 from '@/assets/dish/3.jpg';
+  import picture4 from '@/assets/dish/4.jpg';
+  import picture5 from '@/assets/dish/5.jpg';
+  import picture6 from '@/assets/dish/6.jpg';
+  import picture7 from '@/assets/dish/7.jpg';
+  import picture8 from '@/assets/dish/8.jpg';
+  import picture9 from '@/assets/dish/9.jpg';
+  import picture10 from '@/assets/dish/10.jpg';
+  import picture11 from '@/assets/dish/11.jpg';
+  import picture12 from '@/assets/dish/12.jpg';
+  import picture13 from '@/assets/dish/13.jpg';
+  import picture14 from '@/assets/dish/14.jpg';
+  import picture15 from '@/assets/dish/15.jpg';
 
   export default {
     components: {
@@ -119,6 +134,21 @@
       isInvite: Boolean
     },
     data: () => ({
+    picture1: picture1,
+    picture2: picture2,
+    picture3: picture3,
+    picture4: picture4,
+    picture5: picture5,
+    picture6: picture6,
+    picture7: picture7,
+    picture8: picture8,
+    picture9: picture9,
+    picture10: picture10,
+    picture11: picture11,
+    picture12: picture12,
+    picture13: picture13,
+    picture14: picture14,
+    picture15: picture15,
       restaurant: {
         name: 'Le bon jour',
         dishes: [
@@ -126,32 +156,32 @@
           {
             quantity: 0,
             name: 'Oeuf parfait et lentilles',
-            description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            description: 'Oeuf cuit 65°C sur lit de lentille du puy. Emulsion de jus de lentille et croustillant au sésame',
+            img: picture1,
             price: 7
           }, {
             quantity: 0,
             name: 'Foie gras maison, toasts et confit d’oignons',
-            description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            description: 'Toast de foie gras d\'Alsace sur confit d\'oignons rouge au goût acidulé',
+            img: picture2,
             price: 15
           }, {
             quantity: 0,
             name: 'Millefeuille tomates aubergines mozzarella',
-            description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            description: 'Millefeuille aux mille saveurs, mÈlange de mozzarella di bufala, d\'aubergines de Normandie et de Tomates d\'Ile de France',
+            img: picture3,
             price: 8
           }, {
             quantity: 0,
             name: 'Oeufs mayonnaise à l\'ancienne',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture4,
             price: 6
           }, {
             quantity: 0,
             name: 'Assiette de poireaux et vinaigrette mousseline, parmesan',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture5,
             price: 7
           },
           { header: 'PLATS . 5 choix' },
@@ -159,31 +189,31 @@
             quantity: 0,
             name: 'Tartare de boeuf Charolais, au couteau, pommes grenailles et salade.',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture6,
             price: 17
           }, {
             quantity: 0,
             name: 'Tartare de dorade à l’aneth, mesclun.',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture7,
             price: 19
           }, {
             quantity: 0,
             name: 'Entrecôte de boeuf "Angus" 300 Grs, os à moëlle, sauce poivre et pommes grenailles.',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture8,
             price: 25
           }, {
             quantity: 0,
             name: 'Pièce du boucher, sauce au bleu, purée maison.',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture9,
             price: 19
           }, {
             quantity: 0,
             name: 'Blanquette de volaille, riz basmati',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture10,
             price: 17
           },
           { header: 'DESSERTS . 5 choix' },
@@ -191,32 +221,32 @@
             quantity: 0,
             name: 'Poire pochée au caramel de beurre salé et tuile',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture11,
             price: 8
           }, {
             quantity: 0,
             name: 'Mousse au chocolat et amandes effilées',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture12,
             price: 6
           },
           {
             quantity: 0,
             name: 'Tiramisu au cafe',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture13,
             price: 6
           }, {
             quantity: 0,
             name: 'Crème brulée à la vanille Bourbon',
             description: 'descritpion',
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
-            price: 8.50
+            img: picture14,
           }, {
             quantity: 0,
             name: 'Café ou thé gourmand',
             description: 'descritpion',
-            img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
+            img: picture15,
             price: 7
           }
         ]
