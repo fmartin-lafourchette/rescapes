@@ -16,8 +16,16 @@
       >
         <div class="choose">Choisissez ce que vous souhaitez manger</div>
         <div>
-          <input type="checkbox" value="" name="allTable" id="allTable" />
-          <label for="allTable"> Je commande pour l'ensemble de la table</label>
+            <v-radio-group v-model="radioGroup" class="test">
+                <v-radio
+                        style="font-size:10px;"
+                        v-for="n in 1"
+                        :key="n"
+                        :label="`Je commande pour l'ensemble de la table`"
+                        :value="n"
+                        color="primary"
+                ></v-radio>
+            </v-radio-group>
         </div>
         <v-layout row wrap>
           <template v-for="dish in restaurant.dishes" class="dish">
@@ -214,6 +222,9 @@
 </script>
 
 <style scoped>
+    .test >>> label {
+        font-size:1.3em;
+    }
   .circleWhite {
     background:#ffffff;
     border-radius:50%;
@@ -273,13 +284,14 @@
       bottom: -5px;
       right: 5px;
       color: #589442;
+      font-weight: bold;
   }
 
   .price {
       position: absolute;
       bottom: 13px;
       color: #589442;
-      font-size: 0.9em;
+      font-size: 1em;
   }
 
   .footer {
