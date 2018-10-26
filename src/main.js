@@ -27,7 +27,10 @@ const router = new VueRouter({
     {name:'InvitFriends',path: '/invitFriends', component: InvitFriends},
     {name: 'CreditCard', path: '/creditCard', component: CreditCard, props: true},
     {name: 'End', path: '/end', component: End}
-  ]
+  ],
+  scrollBehavior () {
+    return { x: 0, y: 0 }
+  }
 })
 
 Vue.config.productionTip = false
