@@ -6,6 +6,7 @@
         />
         <div class="circleWhite">
             <div class="circleGreen">
+                <img src="../assets/circle-validate.png" width="30" style="z-index:5;margin:11px 0 0 10px;"/>
             </div>
         </div>
         <v-card>
@@ -174,7 +175,7 @@
     }
 
     div.choose {
-        margin-top: 1em;
+        margin-top: 1.3em;
         margin-bottom: 1em;
         text-align: center;
         font-size: 1em;

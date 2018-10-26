@@ -6,6 +6,7 @@
         />
         <div class="circleWhite">
             <div class="circleGreen">
+                <img src="../assets/circle-credit.png" width="30" style="z-index:5;margin:13px 0 0 10px;"/>
             </div>
         </div>
         <v-card>
@@ -15,7 +16,7 @@
                     style="background-color: #F3F3F5"
             >
                 <div class="choose">
-                    <img src="../assets/card.png" style="position: absolute;top:28px;" /> <span style="display: inline-block;margin-left:30px;margin-top: -5px;">Carte bancaire nécessaire</span>
+                    <img src="../assets/card.png" style="position: absolute;top:33px;" /> <span style="display: inline-block;margin-left:30px;margin-top: -5px;">Carte bancaire nécessaire</span>
                 </div>
                 <div>
                     Cette réservation est soumise à une empreinte bancaire d'un montant de x€.<br />
@@ -228,7 +229,7 @@
     }
 
     div.choose {
-        margin-top: 1em;
+        margin-top: 1.3em;
         margin-bottom: 1em;
         font-size: 1em;
         font-weight: bold;
