@@ -255,6 +255,7 @@
             description: 'descritpion',
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
             img: picture14,
+            price: 6
           }, {
             quantity: 0,
             name: 'Café ou thé gourmand',
