@@ -3,6 +3,7 @@ import './plugins/vuetify'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import CreditCard from './components/CreditCard.vue'
+import Intro from './components/Intro.vue'
 import BookYourMenu from './components/BookYourMenu.vue'
 import InvitFriends from './components/InvitFriends.vue'
 import Register from './components/Register.vue'
@@ -19,8 +20,9 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
-    {path: '/', component: BookYourMenu, props: {isInvite: false}},
-    {path: '/bookYourMenu', component: BookYourMenu, props: {isInvite: true}},
+    {path: '/', component: Intro},
+    {name: 'BookYourMenu', path: '/BookYourMenu', component: BookYourMenu, props: {isInvite: false}},
+    {path: '/bookYourMenuFriend', component: BookYourMenu, props: {isInvite: true}},
     {path: '/register', component: Register},
     {name:'InvitFriends',path: '/invitFriends', component: InvitFriends},
     {name: 'CreditCard', path: '/creditCard', component: CreditCard},
