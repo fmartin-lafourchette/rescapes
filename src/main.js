@@ -25,7 +25,7 @@ const router = new VueRouter({
     {path: '/bookYourMenuFriend', component: BookYourMenu, props: {isInvite: true}},
     {path: '/register', component: Register},
     {name:'InvitFriends',path: '/invitFriends', component: InvitFriends},
-    {name: 'CreditCard', path: '/creditCard', component: CreditCard},
+    {name: 'CreditCard', path: '/creditCard', component: CreditCard, props: true},
     {name: 'End', path: '/end', component: End}
   ]
 })

@@ -121,7 +121,11 @@
         dish.quantity++
       },
       validate () {
-        this.$router.push('CreditCard');
+        this.$router.push({ name: 'CreditCard', params: {total: this.restaurant.dishes.reduce((tot, dish) => {
+            if (!dish.header)
+              tot += dish.quantity * dish.price
+            return tot;
+          }, 0)}});
       }
     },
     props: {
