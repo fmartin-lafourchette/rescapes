@@ -91,7 +91,8 @@
         </h2>
       </center>
       <div class="px-3">
-        <v-btn block color="primary" @click="validate()">VALIDER</v-btn>
+        <v-btn block color="primary" v-if="!isInvite" @click="validate()">VALIDER</v-btn>
+          <v-btn block color="primary" v-if="isInvite" @click="validateFriend()">TERMINER</v-btn>
         </div>
         <v-flex xs12>
             <div class="footer">
@@ -141,6 +142,8 @@
               tot += dish.quantity * dish.price
             return tot;
           }, 0)}});
+      }, validateFriend() {
+         this.$router.push({ name: 'End'});
       }
     },
     props: {

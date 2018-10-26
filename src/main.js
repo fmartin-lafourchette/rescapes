@@ -22,7 +22,7 @@ const router = new VueRouter({
   routes: [
     {path: '/', component: Intro},
     {name: 'BookYourMenu', path: '/BookYourMenu', component: BookYourMenu, props: {isInvite: false}},
-    {path: '/bookYourMenuFriend', component: BookYourMenu, props: {isInvite: true}},
+    {name: 'bookYourMenuFriend', path: '/bookYourMenuFriend', component: BookYourMenu, props: {isInvite: true}},
     {path: '/register', component: Register},
     {name:'InvitFriends',path: '/invitFriends', component: InvitFriends},
     {name: 'CreditCard', path: '/creditCard', component: CreditCard, props: true},

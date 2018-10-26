@@ -46,7 +46,7 @@
     },
     methods: {
       validate () {
-        this.$router.push('End');
+        this.$router.push('bookYourMenuFriend');
       }
     },
     data: () => ({
