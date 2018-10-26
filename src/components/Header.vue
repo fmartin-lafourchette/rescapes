@@ -32,9 +32,6 @@
             </div>
         </center>
       </v-layout>
-      <v-card-text style="height: 100px; position: relative">
-        <v-img src="../assets/lafourchette.svg"></v-img>
-      </v-card-text>
     </v-img>
 </template>
 

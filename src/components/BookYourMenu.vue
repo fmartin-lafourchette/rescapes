@@ -4,6 +4,11 @@
       :restaurant="restaurant"
       logo="./assets/lafourchette.svg"
     />
+    <div class="circleWhite">
+        <div class="circleGreen">
+        </div>
+    </div>
+    <br />
     <v-card>
       <v-container
         fluid
@@ -209,6 +214,32 @@
 </script>
 
 <style scoped>
+  .circleWhite {
+    background:#ffffff;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    position: absolute;
+    top: 170px;
+    z-index: 2;
+    margin:0 auto;
+    left:50%;
+    margin-left: -30px;
+  }
+
+  .circleGreen {
+    background:#589442;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    position: absolute;
+    z-index: 3;
+    margin:0 auto;
+    left:50%;
+    margin-left: -25px;
+    top: 5px;
+  }
+
   .v-card {
       border-radius: 5px;
   }
