@@ -39,6 +39,7 @@
             <v-flex xs12 sm6 md3 v-if="!dish.header">
               <v-card
                 class="gray--text mt-3"
+                style="background-color: #F0F0F3"
               >
                 <v-layout>
                   <v-flex xs5>
@@ -190,13 +191,13 @@
           }, {
             quantity: 0,
             name: 'Oeufs mayonnaise à l\'ancienne',
-            description: 'descritpion',
+            description: 'Oeufs de Poule biologique élevée dans le Limousin, oignons rouges',
             img: picture4,
             price: 6
           }, {
             quantity: 0,
             name: 'Assiette de poireaux et vinaigrette mousseline, parmesan',
-            description: 'descritpion',
+            description: 'Poireaux de Nantes et vinaigrette balsamique et huile de citron, crème de parmesan',
             img: picture5,
             price: 7
           },
@@ -204,31 +205,31 @@
           {
             quantity: 0,
             name: 'Tartare de boeuf Charolais, au couteau, pommes grenailles et salade.',
-            description: 'descritpion',
+            description: 'Charolais d\'origine France, grenailles du Touquet',
             img: picture6,
             price: 17
           }, {
             quantity: 0,
             name: 'Tartare de dorade à l’aneth, mesclun.',
-            description: 'descritpion',
+            description: 'Dorade de pêche responsable, pièce du marché',
             img: picture7,
             price: 19
           }, {
             quantity: 0,
             name: 'Entrecôte de boeuf "Angus" 300 Grs, os à moëlle, sauce poivre et pommes grenailles.',
-            description: 'descritpion',
+            description: 'Entrecôte de boeuf "Angus" 300 Grs, os à moëlle, sauce poivre et pommes grenailles.',
             img: picture8,
             price: 25
           }, {
             quantity: 0,
             name: 'Pièce du boucher, sauce au bleu, purée maison.',
-            description: 'descritpion',
+            description: 'Pièce d\'origine France, sauce au bleu de Roquefort',
             img: picture9,
             price: 19
           }, {
             quantity: 0,
             name: 'Blanquette de volaille, riz basmati',
-            description: 'descritpion',
+            description: 'Volailles élevées en plein air',
             img: picture10,
             price: 17
           },
@@ -236,33 +237,33 @@
           {
             quantity: 0,
             name: 'Poire pochée au caramel de beurre salé et tuile',
-            description: 'descritpion',
+            description: 'Poire fondante au caramel beurre salé',
             img: picture11,
             price: 8
           }, {
             quantity: 0,
             name: 'Mousse au chocolat et amandes effilées',
-            description: 'descritpion',
+            description: 'Mousse montée à la main et amandes torréfiées',
             img: picture12,
             price: 6
           },
           {
             quantity: 0,
             name: 'Tiramisu au cafe',
-            description: 'descritpion',
+            description: 'Tiramisu à la mascarpone, origine Italie',
             img: picture13,
             price: 6
           }, {
             quantity: 0,
             name: 'Crème brulée à la vanille Bourbon',
-            description: 'descritpion',
+            description: 'Crème brulée aux oeufs bio, vanille Bourbon de Madagascar',
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
             img: picture14,
             price: 6
           }, {
             quantity: 0,
             name: 'Café ou thé gourmand',
-            description: 'descritpion',
+            description: 'Accompagné de plusieurs mignardises : cannelé, cookie et crème brûlée',
             img: picture15,
             price: 7
           }
