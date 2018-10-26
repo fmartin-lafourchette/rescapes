@@ -15,7 +15,7 @@
         grid-list-lg
       >
         <div class="choose">Choisissez ce que vous souhaitez manger</div>
-        <div>
+        <div v-if="!isInvite">
             <v-radio-group v-model="radioGroup" class="test">
                 <v-radio
                         style="font-size:10px;"
@@ -82,7 +82,7 @@
         </v-layout>
       </v-container>
       <div class="px-3">
-        <v-btn block color="primary" @click="validate()">Valider</v-btn>
+        <v-btn block color="primary" @click="validate()">VALIDER</v-btn>
         </div>
         <v-flex xs12>
             <div class="footer">
@@ -112,8 +112,11 @@
         dish.quantity++
       },
       validate () {
-        this.$router.push('InvitFriends');
+        this.$router.push('CreditCard');
       }
+    },
+    props: {
+      isInvite: Boolean
     },
     data: () => ({
       restaurant: {
@@ -133,6 +136,7 @@
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
             price: 15
           }, {
+            quantity: 0,
             name: 'Millefeuille tomates aubergines mozzarella',
             description: 'descritpion',
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
@@ -164,7 +168,7 @@
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',
             price: 19
           }, {
-            type: 'Plat',
+            quantity: 0,
             name: 'Entrecôte de boeuf "Angus" 300 Grs, os à moëlle, sauce poivre et pommes grenailles.',
             description: 'descritpion',
             img: 'https://www.papillesetpupilles.fr/wp-content/uploads/2018/04/Salade-Cobb-1150x0.jpg',

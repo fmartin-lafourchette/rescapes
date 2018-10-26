@@ -6,76 +6,33 @@
         />
         <div class="circleWhite">
             <div class="circleGreen">
-                <img src="../assets/circle-credit.png" width="30" style="z-index:5;margin:13px 0 0 10px;"/>
+                <img src="../assets/circle-validate.png" width="30" style="z-index:5;margin:11px 0 0 10px;"/>
             </div>
         </div>
         <v-card>
             <v-container
                     fluid
                     grid-list-lg
-                    style="background-color: #F3F3F5"
             >
                 <div class="choose">
-                    <img src="../assets/card.png" style="position: absolute;top:33px;" /> <span style="display: inline-block;margin-left:30px;margin-top: -5px;">Carte bancaire nécessaire</span>
-                </div>
-                <div>
-                    Cette réservation est soumise à une empreinte bancaire d'un montant de x€.<br />
-                    Aucun montant n'est débité imédiatement.<br /><br />
-                    <div style="text-align: center">
-                        <a href="" style="color:black;font-size:0.8em;">En savoir plus</a>
+                    <strong>NOUVEAU !</strong> Gagnez du temps en indiquant  au restaurateur ce que vous souhaitez manger.
+                    <br />
+                    <br />
+                    Veuillez saisir votre email pour choisir votre repas.
+                    <br />
+                    <br />
+                    <v-text-field
+                            v-model="email"
+                            :rules="emailRules"
+                            label="Adresse email"
+                    ></v-text-field>
+                    <br /><br /><br />
+                    <div class="px-3">
+                        <v-btn block color="primary" @click="validate()">CHOISIR MON REPAS</v-btn>
+                        <v-btn block flat style="color:#589442">PAS MAINTENANT</v-btn>
                     </div>
                 </div>
             </v-container>
-            <v-container>
-                <div class="detail" style="font-weight: bold;">DETAILS DE LA CARTE</div>
-                <div style="padding:10px;border:1px solid #CCCCCC;border-radius:5px;margin:10px 0;">
-                    <template>
-                        <v-form v-model="valid">
-                            <v-text-field
-                                    v-model="name"
-                                    :rules="nameRules"
-                                    label="Numéro de la carte"
-                                    required
-                            ></v-text-field>
-                            <v-text-field
-                                    v-model="name"
-                                    :rules="nameRules"
-                                    label="Titulaire de la carte"
-                                    required
-                            ></v-text-field>
-                            <div style="width:50%;">
-                                <v-text-field
-                                        v-model="name"
-                                        :rules="nameRules"
-                                        label="Date expiration"
-                                        required
-                                ></v-text-field>
-                            </div>
-                            <div style="width:50%;">
-                                <v-text-field
-                                        v-model="name"
-                                        :rules="nameRules"
-                                        label="Code de sécurité"
-                                        required
-                                ></v-text-field>
-                            </div>
-                        </v-form>
-                    </template>
-                </div>
-            </v-container>
-            <div class="px-3">
-                <v-btn block color="primary" @click="validate()">TERMINER ET PARTAGER</v-btn>
-            </div>
-            <div class="px-3" style="text-align: center;font-size: 0.9em;">
-                <br />
-                Opération sécurisée
-                <br /><br />
-                <font style="color:darkgrey;">En cliquant sur "TERMINER ET PARTAGER" vous acceptez les conditions générales de réservation du restaurant.</font>
-                <br /><br />
-                <br /><br />
-                <br /><br />
-                <br /><br />
-            </div>
         </v-card>
     </v-content>
 </template>
@@ -89,11 +46,8 @@
     },
     methods: {
       validate () {
-        this.$router.push('InvitFriends');
-      },
-      increment (dish) {
-        dish.quantity++
-      },
+        this.$router.push('End');
+      }
     },
     data: () => ({
     restaurant: {
@@ -231,8 +185,9 @@
     div.choose {
         margin-top: 1.3em;
         margin-bottom: 1em;
+        text-align: center;
         font-size: 1em;
-        font-weight: bold;
+        text-align: center;
     }
 
     .picture {

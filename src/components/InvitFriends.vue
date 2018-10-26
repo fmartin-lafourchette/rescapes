@@ -16,7 +16,7 @@
             >
                 <div class="choose">Invitez vos convives à choisir leurs plats</div>
                 <div style="text-align: center">
-                    Il recevront par email une invitation pour<br /> sélectionner leur plats<br /><br />
+                    Ils recevront par email une invitation pour<br /> sélectionner leur plats<br /><br />
                     <div style="border:1px solid grey;border-radius: 5px;padding:10px;">
                         <div style="text-align: left; position: relative">
                             <strong>À  </strong>
@@ -55,7 +55,7 @@
     },
     methods: {
       validate () {
-        this.$router.push('CreditCard');
+        this.$router.push('End');
       }
     },
     data: () => ({
