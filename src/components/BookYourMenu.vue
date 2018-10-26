@@ -95,13 +95,16 @@
         <v-btn block color="primary" v-if="!isInvite" @click="validate()">VALIDER</v-btn>
           <v-btn block color="primary" v-if="isInvite" @click="validateFriend()">TERMINER</v-btn>
         </div>
-        <v-flex xs12>
-            <div class="footer">
+        <v-flex xs12 >
+            <div class="footer" v-if="!isInvite">
                 <strong>Carte bancaire nécessaire</strong>
                 <br />
                 Confirmation immédiate - Service gratuit<br />
                 Annulation gratuite jusqu'à 24h avant le repas<br />
                 En cliquant sur "CONTINUER" j'accepte les conditions générales d'utilisation
+            </div>
+            <div v-if="isInvite">
+                <br /><br />
             </div>
         </v-flex>
     </v-card>

@@ -15,17 +15,10 @@
                     grid-list-lg
             >
                 <div class="choose">
-                    <strong>NOUVEAU !</strong> Gagnez du temps en indiquant  au restaurateur ce que vous souhaitez manger.
+                    <strong>NOUVEAU ! Cécile vous a invité au restaurant.</strong><br />Gagnez du temps en indiquant  au restaurateur ce que vous souhaitez manger.
                     <br />
                     <br />
-                    Veuillez saisir votre email pour choisir votre repas.
-                    <br />
-                    <br />
-                    <v-text-field
-                            v-model="email"
-                            :rules="emailRules"
-                            label="Adresse email"
-                    ></v-text-field>
+                    <img src="../assets/illustration.png" style="width:90%" /></div>
                     <br /><br /><br />
                     <div class="px-3">
                         <v-btn block color="primary" @click="validate()">CHOISIR MON REPAS</v-btn>
