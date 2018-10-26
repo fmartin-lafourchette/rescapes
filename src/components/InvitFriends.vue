@@ -32,7 +32,7 @@
                     <br />
                     <br />
                     <div class="px-3">
-                        <v-btn block color="primary">ENVOYER L'INVITATION</v-btn>
+                        <v-btn block color="primary" @click="validate()">ENVOYER L'INVITATION</v-btn>
                         <v-btn block flat style="color:#589442">PAS MAINTENANT</v-btn>
                     </div>
                 </div>
@@ -49,12 +49,9 @@
       Header
     },
     methods: {
-      decrement (dish) {
-        dish.quantity && dish.quantity--
-      },
-      increment (dish) {
-        dish.quantity++
-      },
+      validate () {
+        this.$router.push('CreditCard');
+      }
     },
     data: () => ({
     restaurant: {

@@ -69,7 +69,7 @@
         </v-layout>
       </v-container>
       <div class="px-3">
-        <v-btn block color="primary">Valider</v-btn>
+        <v-btn block color="primary" @click="validate()">Valider</v-btn>
         </div>
         <v-flex xs12>
             <div class="footer">
@@ -98,6 +98,9 @@
       increment (dish) {
         dish.quantity++
       },
+      validate () {
+        this.$router.push('InvitFriends');
+      }
     },
     data: () => ({
       restaurant: {

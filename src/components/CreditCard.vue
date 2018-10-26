@@ -59,7 +59,7 @@
                 </div>
             </v-container>
             <div class="px-3">
-                <v-btn block color="primary">TERMINER LA RESERVATION</v-btn>
+                <v-btn block color="primary" @click="validate()">TERMINER LA RESERVATION</v-btn>
             </div>
             <div class="px-3" style="text-align: center;font-size: 0.9em;">
                 <br />
@@ -83,8 +83,8 @@
       Header
     },
     methods: {
-      decrement (dish) {
-        dish.quantity && dish.quantity--
+      validate () {
+        this.$router.push('end');
       },
       increment (dish) {
         dish.quantity++

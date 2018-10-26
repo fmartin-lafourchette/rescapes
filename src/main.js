@@ -19,9 +19,9 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     {path: '/', component: BookYourMenu},
-    {path: '/invitFriends', component: InvitFriends},
-    {path: '/creditCard', component: CreditCard},
-    {path: '/end', component: End}
+    {name:'InvitFriends',path: '/invitFriends', component: InvitFriends},
+    {name: 'CreditCard', path: '/creditCard', component: CreditCard},
+    {name: 'End', path: '/end', component: End}
   ]
 })
 
